@@ -23,7 +23,7 @@
 \newfontface\condensed{Roboto Condensed}
 
 \usepackage{setspace}
-\setstretch{1.1}
+\setstretch{1.05}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   PACKAGES & GENERAL SETUP
@@ -97,6 +97,7 @@
 \newcommand{\pypi}[1]{\entrylink{#1}{PyPI}}
 \newcommand{\pdf}[1]{\entrylink{#1}{PDF}}
 \newcommand{\doi}[1]{\entrylink{#1}{DOI}}
+\newcommand{\github}[1]{\entrylink{#1}{GitHub}}
 
 \reversemarginpar % Puts margin notes on the left
 \newcommand{\entrydate}[1]{\marginnote{\small{\condensed{#1}}}}
@@ -141,19 +142,24 @@
 \textsc{E-mail:} \href{mailto:\myemail}{\texttt{\myemail}} \sep{}
 \textsc{Phone:} \href{tel:\myphonelink}{\texttt{\myphonetext}}
 
-% --- OPEN SOURCE ENGINEERING ---
+% --- SECTIONS ---
+
 \mysubsection{Open Source Engineering}
+
+\workentry{2024 — \the\year{}}{zignal}{Creator}{\href{https://bfactory-ai.github.io/zignal/}{https://bfactory-ai.github.io/zignal} \github{https://github.com/bfactory-ai/zignal}}
+Engineered a zero-dependency, SIMD-optimized CV library in Zig
 \begin{entrylist}
-    \item \textbf{Major contributor to \href{https://dlib.net/}{dlib} (C++)}:
-    Authored 180+ PRs focusing on DL internals: implemented C++/CUDA layers (e.g., LayerNorm),
-    inference optimizations (layer fusion), and modern codec support (WebP/JPEG XL) \html{https://github.com/davisking/dlib/commits?author=arrufat}
-    \item \textbf{Creator of \textbf{\href{https://github.com/bfactory-ai/zignal}{zignal}} (Zig)}:
-    Engineered a zero-dependency, SIMD-optimized CV library.
-    Implemented core algorithms (SVD, Canny) and image codecs (JPEG, PNG) entirely from scratch,
-    and Python bindings \pypi{https://pypi.org/project/zignal-processing/} \entrylink{https://bfactory-ai.github.io/zignal/examples/}{Demo}
+    \item Implemented core algorithms (SVD, Canny) and image codecs (PNG, JPEG) entirey from scratch
+    \item Python bindings \pypi{https://pypi.org/project/zignal-processing/} and web examples \entrylink{https://bfactory-ai.github.io/zignal/examples/}{Demo}
 \end{entrylist}
 
-% --- SECTIONS ---
+\workentry{2019 — \the\year{}}{dlib}{Major contributor}{\href{https://dlib.net/}{\texttt{dlib.net}} \github{https://github.com/davisking/dlib/commits?author=arrufat}}
+Authored 180+ pull requests focusing on deep learning internals and image processing
+\begin{entrylist}
+    \item Implemented C++/CUDA layers (e.g., LayerNorm, YOLO loss, BarlowTwins) and layer fusion
+    \item Added modern codec support (WebP/JPEG-XL) and unicode support for text on images
+\end{entrylist}
+
 \mysubsection{Working Experience}
 
 \workentry{2023 — \the\year{}}{B*Factory}{Machine Learning Engineer}{Seoul, South Korea}
